@@ -63,6 +63,7 @@ public class Main {
         //MENU:
         Scanner scanner = new Scanner(System.in);
         Integer opcion;
+        Integer opcionStock;
 
         do{
             System.out.println("MENU:");
@@ -157,7 +158,24 @@ public class Main {
                     //Imprimir chasis creados
                     break;
                 case 4:
-                    //Actualizar stock accesorios
+                    String codAccesorio;
+                    Integer unidades;
+                    Accesorio accesorioElegido;
+                    do{
+                        System.out.println("Introduce el indice del accesorio");
+                        codAccesorio = scanner.next();
+                        System.out.println("Introduce el numero de unidades que desea añadir");
+                        unidades = scanner.nextInt();
+
+                        //caso de uso para coger el accesorio elegido
+                         accesorioElegido = buscarAccesorioUseCase.execute(codAccesorio);
+                        //caso de uso para modificar las unidades
+                        accesorioElegido.setUnidades(accesorioElegido.getUnidades() + unidades);
+                        modificarAccesorioUseCase.execute(accesorioElegido);
+
+                        System.out.println("Si quiere añadir otro accesorio ponga un 1, sino ponga otro numero");
+                        opcionStock = scanner.nextInt();
+                    }while(opcionStock == 1);
                     break;
                 case 5:
                     System.out.println("Adios");
