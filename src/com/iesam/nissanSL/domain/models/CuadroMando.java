@@ -1,6 +1,6 @@
 package com.iesam.nissanSL.domain.models;
 
-public class CuadroMando implements Accesorios{
+public class CuadroMando implements Accesorio{
 
     private String codigo;
 

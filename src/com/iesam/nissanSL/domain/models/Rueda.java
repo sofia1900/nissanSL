@@ -2,7 +2,7 @@ package com.iesam.nissanSL.domain.models;
 
 import com.sun.jdi.IntegerType;
 
-public class Ruedas implements Accesorios{
+public class Rueda implements Accesorio{
 
     private String codigo;
 

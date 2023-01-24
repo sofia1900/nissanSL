@@ -1,6 +1,6 @@
 package com.iesam.nissanSL.domain.models;
 
-public class Motor implements Accesorios{
+public class Motor implements Accesorio{
 
     private String codigo;
 
