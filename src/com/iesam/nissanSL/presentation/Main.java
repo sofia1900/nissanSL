@@ -10,14 +10,14 @@ public class Main {
     public static void main(String[] args) {
 
         Rueda ruedaA = new Rueda();
-        ruedaA.setCodigo("1");
+        ruedaA.setCodigo("1R");
         ruedaA.setMarca("Michelin");
         ruedaA.setModelo("Alpin 6");
         ruedaA.setDiametro("185");
         ruedaA.setUnidades(5);
 
         Rueda ruedaB = new Rueda();
-        ruedaB.setCodigo("2");
+        ruedaB.setCodigo("2R");
         ruedaB.setMarca("Firestone");
         ruedaB.setModelo("Winter Hawk");
         ruedaB.setDiametro("205");
@@ -26,14 +26,14 @@ public class Main {
 
 
         Motor motorA = new Motor();
-        motorA.setCodigo("1");
+        motorA.setCodigo("1M");
         motorA.setModelo("x6000");
         motorA.setCilindrada("2.0");
         motorA.setCaballos("120cv");
         motorA.setUnidades(2);
 
         Motor motorB = new Motor();
-        motorB.setCodigo("2");
+        motorB.setCodigo("2M");
         motorB.setModelo("x9000");
         motorB.setCilindrada("2.4");
         motorB.setCaballos("160cv");
@@ -42,12 +42,12 @@ public class Main {
 
 
         CuadroMando cuadroMandoA = new CuadroMando();
-        cuadroMandoA.setCodigo("1");
+        cuadroMandoA.setCodigo("1C");
         cuadroMandoA.setModelo("LM2000");
         cuadroMandoA.setUnidades(4);
 
         CuadroMando cuadroMandoB = new CuadroMando();
-        cuadroMandoB.setCodigo("2");
+        cuadroMandoB.setCodigo("2C");
         cuadroMandoB.setModelo("LM6000");
         cuadroMandoB.setUnidades(2);
 
