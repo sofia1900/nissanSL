@@ -174,6 +174,8 @@ public class Main {
                     break;
                 case 3:
                     //Imprimir chasis creados
+                    PrintChasis printChasis = new PrintChasis();
+                    printChasis.printChasis(chasisAAAA);
                     break;
                 case 4:
                     String codAccesorio;
