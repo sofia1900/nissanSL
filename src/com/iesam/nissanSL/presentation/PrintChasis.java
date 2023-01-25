@@ -1,15 +1,19 @@
 package com.iesam.nissanSL.presentation;
 
 import com.iesam.nissanSL.domain.models.Chasis;
+import com.iesam.nissanSL.domain.useCases.BuscarChasisUseCase;
 
 public class PrintChasis {
 
-    public static void printChasis(Chasis chasis){
+    public void printChasis(String codigoBastidor){
+        BuscarChasisUseCase buscarChasisUseCase = new BuscarChasisUseCase();
 
-        System.out.println("Este montaje tiene el chasis"+chasis.getCodigoBastidor());
-        System.out.println("LLeva montadas las ruedas "+chasis.getAccesorios().get(0));
-        System.out.println("LLeva el motor "+chasis.getAccesorios().get(1));
-        System.out.println("LLeva el cuadro de mando "+chasis.getAccesorios().get(2));
+        System.out.println("");
+        System.out.println("Este montaje tiene el codigoBastidor "+buscarChasisUseCase.execute(codigoBastidor).getCodigoBastidor());
+        System.out.println("LLeva montadas las ruedas "+buscarChasisUseCase.execute(codigoBastidor).getAccesorios().get(0).getCodigo());
+        System.out.println("LLeva el motor "+buscarChasisUseCase.execute(codigoBastidor).getAccesorios().get(1).getCodigo());
+        System.out.println("LLeva el cuadro de mando "+buscarChasisUseCase.execute(codigoBastidor).getAccesorios().get(2).getCodigo());
+        System.out.println("");
 
 
 

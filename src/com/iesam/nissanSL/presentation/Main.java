@@ -173,9 +173,13 @@ public class Main {
                     printStock.printStock();
                     break;
                 case 3:
-                    //Imprimir chasis creados
+                    //Esta función se podria modificar para que el codigo del chasis se introduzca por teclado
                     PrintChasis printChasis = new PrintChasis();
-                    printChasis.printChasis(chasisAAAA);
+                    printChasis.printChasis("AAAA");
+                    printChasis.printChasis("BBBB");
+                    printChasis.printChasis("CCCC");
+                    printChasis.printChasis("DDDD");
+
                     break;
                 case 4:
                     String codAccesorio;
