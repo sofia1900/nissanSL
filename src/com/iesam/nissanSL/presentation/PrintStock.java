@@ -3,7 +3,7 @@ package com.iesam.nissanSL.presentation;
 import com.iesam.nissanSL.domain.useCases.BuscarAccesorioUseCase;
 
 public class PrintStock {
-    public static void printStock (){
+    public void printStock (){
         BuscarAccesorioUseCase buscarAccUseCase = new BuscarAccesorioUseCase();
 
         System.out.println("El numero de ruedas A que hay es " + buscarAccUseCase.execute("1R").getUnidades());
