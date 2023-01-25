@@ -12,10 +12,17 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+
         GuardarAccesorioUseCase guardarAccesorioUseCase = new GuardarAccesorioUseCase();
         ModificarAccesorioUseCase modificarAccesorioUseCase = new ModificarAccesorioUseCase();
         BuscarAccesorioUseCase buscarAccesorioUseCase = new BuscarAccesorioUseCase();
         GuardarChasisUseCase guardarChasisUseCase = new GuardarChasisUseCase();
+
+        /*
+         Todos los datos han sido introducidos directamente para que a la hora de comprobar que funciona
+         el codigo no tener que meter todos los datos por teclado y sea más rápido. Esto se modificaría
+         utilizando la clase Scanner.
+         */
 
         Rueda ruedaA = new Rueda();
         ruedaA.setCodigo("1R");
@@ -68,6 +75,7 @@ public class Main {
         Integer opcionStock;
 
         do{
+            System.out.println("");
             System.out.println("MENU:");
             System.out.println("1. Crear los chasis de hoy");
             System.out.println("2. Imprimir stock accesorios");
@@ -77,9 +85,16 @@ public class Main {
             System.out.println("");
             System.out.println("Elige la opcion");
             opcion = scanner.nextInt();
-
+            System.out.println("");
             switch (opcion){
                 case 1:
+                    /*
+                    Esta opcion se podría modificar para que el usuario introdujera los cuatro chasis que
+                    monta en ese día por teclado. Se utilizaría la clase Scanner y se repetiría en un bucle
+                    for porque siempre son 4 los chasis que se montan o se haría una espcie de menú, como
+                    en la opcion 4 del menu, es decir, se preguntaría al usuario constantemente si quiere
+                    introducir un nuevo chasis.
+                     */
                     Chasis chasisAAAA = new Chasis();
                     chasisAAAA.setCodigoBastidor("AAAA");
                     chasisAAAA.setMarca("Ford");
@@ -154,7 +169,8 @@ public class Main {
 
                     break;
                 case 2:
-                    //Imprimir stock accesorios
+                    PrintStock printStock = new PrintStock();
+                    printStock.printStock();
                     break;
                 case 3:
                     //Imprimir chasis creados
@@ -166,6 +182,7 @@ public class Main {
                     do{
                         System.out.println("Introduce el indice del accesorio");
                         codAccesorio = scanner.next();
+                            //Para completarlo más, habría que comprobar que existe un accesorio con ese codigo.
                         System.out.println("Introduce el numero de unidades que desea añadir");
                         unidades = scanner.nextInt();
 
