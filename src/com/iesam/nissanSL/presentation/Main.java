@@ -3,6 +3,7 @@ package com.iesam.nissanSL.presentation;
 import com.iesam.nissanSL.domain.models.*;
 import com.iesam.nissanSL.domain.useCases.BuscarAccesorioUseCase;
 import com.iesam.nissanSL.domain.useCases.GuardarAccesorioUseCase;
+import com.iesam.nissanSL.domain.useCases.GuardarChasisUseCase;
 import com.iesam.nissanSL.domain.useCases.ModificarAccesorioUseCase;
 
 import java.util.Scanner;
@@ -14,6 +15,7 @@ public class Main {
         GuardarAccesorioUseCase guardarAccesorioUseCase = new GuardarAccesorioUseCase();
         ModificarAccesorioUseCase modificarAccesorioUseCase = new ModificarAccesorioUseCase();
         BuscarAccesorioUseCase buscarAccesorioUseCase = new BuscarAccesorioUseCase();
+        GuardarChasisUseCase guardarChasisUseCase = new GuardarChasisUseCase();
 
         Rueda ruedaA = new Rueda();
         ruedaA.setCodigo("1R");
@@ -94,7 +96,7 @@ public class Main {
                     //caso de uso para modificar las unidades de motores que hay
                         cuadroMandoA.setUnidades(cuadroMandoA.getUnidades() - 1);
                         modificarAccesorioUseCase.execute(cuadroMandoA);
-                    //Caso de uso para guardar este chasis
+                    guardarChasisUseCase.execute(chasisAAAA);
 
                     Chasis chasisBBBB = new Chasis();
                     chasisBBBB.setCodigoBastidor("BBBB");
@@ -112,7 +114,7 @@ public class Main {
                     //caso de uso para modificar las unidades de motores que hay
                         cuadroMandoB.setUnidades(cuadroMandoB.getUnidades() - 1);
                         modificarAccesorioUseCase.execute(cuadroMandoB);
-                    //Caso de uso para guardar este chasis
+                    guardarChasisUseCase.execute(chasisBBBB);
 
                     Chasis chasisCCCC = new Chasis();
                     chasisCCCC.setCodigoBastidor("CCCC");
@@ -130,7 +132,7 @@ public class Main {
                     //caso de uso para modificar las unidades de motores que hay
                         cuadroMandoA.setUnidades(cuadroMandoA.getUnidades() - 1);
                         modificarAccesorioUseCase.execute(cuadroMandoA);
-                    //Caso de uso para guardar este chasis
+                    guardarChasisUseCase.execute(chasisCCCC);
 
                     Chasis chasisDDDD = new Chasis();
                     chasisDDDD.setCodigoBastidor("DDDD");
@@ -148,7 +150,7 @@ public class Main {
                     //caso de uso para modificar las unidades de motores que hay
                         cuadroMandoB.setUnidades(cuadroMandoB.getUnidades() - 1);
                         modificarAccesorioUseCase.execute(cuadroMandoB);
-                    //Caso de uso para guardar este chasis
+                    guardarChasisUseCase.execute(chasisDDDD);
 
                     break;
                 case 2:
