@@ -14,6 +14,10 @@ public class ChasisDataStore {
         dataStore.put(chasis.getCodigoBastidor(),chasis);
     }
 
+    public Chasis buscarBycode (String codigo){
+        return dataStore.get(codigo);
+    }
+
     public static ChasisDataStore getInstance(){
         if (instance==null){
             instance=new ChasisDataStore();
